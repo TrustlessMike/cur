@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YourAppName - Digital Trading Platform</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">YourAppName</div>
+            <ul>
+                <li><a href="#markets">Markets</a></li>
+                <li><a href="#features">Features</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#roadmap">Roadmap</a></li>
+                <li><a href="#team">Team</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section id="hero">
+            <h1>Enhance Your Digital Trading Experience</h1>
+            <p>Secure, fast, and intuitive platform for digital asset trading.</p>
+            <button id="start-trading-btn">Start Trading</button>
+        </section>
+        <section id="markets">
+            <h2>Markets</h2>
+            <div class="market-filters">
+                <button class="filter-btn active">All</button>
+                <button class="filter-btn">Buy</button>
+                <button class="filter-btn">Sell</button>
+            </div>
+            <table class="market-table">
+                <thead>
+                    <tr>
+                        <th>Coin</th>
+                        <th>Price</th>
+                        <th>24h Change</th>
+                        <th>24h Volume</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody id="market-data">
+                    <!-- Data will be populated here by JavaScript -->
+                </tbody>
+            </table>
+        </section>
+        <section id="stats">
+            <div class="stat-item">
+                <h2>100k+</h2>
+                <p>Active Traders</p>
+            </div>
+            <div class="stat-item">
+                <h2>$500M+</h2>
+                <p>24h Trading Volume</p>
+            </div>
+            <div class="stat-item">
+                <h2>50+</h2>
+                <p>Trading Pairs</p>
+            </div>
+        </section>
+        <section id="features">
+            <h2>Features</h2>
+            <ul>
+                <li>
+                    <h3>Advanced Trading Tools</h3>
+                    <p>Access professional-grade charts and analysis tools.</p>
+                </li>
+                <li>
+                    <h3>Secure Wallet</h3>
+                    <p>Store your assets safely with our state-of-the-art security measures.</p>
+                </li>
+                <li>
+                    <h3>24/7 Support</h3>
+                    <p>Our dedicated team is always ready to assist you.</p>
+                </li>
+            </ul>
+        </section>
+        <section id="about">
+            <h2>About YourAppName</h2>
+            <p>YourAppName is a cutting-edge digital trading platform designed to provide traders with a secure, efficient, and user-friendly environment. Our mission is to democratize access to digital asset markets and empower traders of all levels.</p>
+        </section>
+        <section id="roadmap">
+            <h2>Roadmap</h2>
+            <ul>
+                <li>Q3 2023: Launch of margin trading</li>
+                <li>Q4 2023: Mobile app release</li>
+                <li>Q1 2024: Integration of DeFi protocols</li>
+            </ul>
+        </section>
+        <section id="team">
+            <h2>Our Team</h2>
+            <p>Our diverse team of experts in finance, technology, and blockchain is committed to delivering the best possible trading experience for our users.</p>
+        </section>
+        <section id="contact">
+            <h2>Contact Us</h2>
+            <form id="contact-form">
+                <input type="email" placeholder="Enter your email" required>
+                <textarea placeholder="Your message" required></textarea>
+                <button type="submit">Send Message</button>
+            </form>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2023 YourAppName. All rights reserved.</p>
+        <nav>
+            <a href="privacy-policy.html">Privacy Policy</a>
+            <a href="terms-of-service.html">Terms of Service</a>
+        </nav>
+        <div class="partners">
+            <p>Audited by:</p>
+            <img src="path-to-auditor-logo.png" alt="Auditor Logo" class="auditor-logo">
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,11 @@
+Landing page for project
+Allows users to sign up for the project email list
+
+Features:
+-User can sign up for the email list
+-users can view the documentation
+-users can view the roadmap
+-users can view the team
+-users can view the contact page
+-users can view the privacy policy
+-users can view the terms of service
