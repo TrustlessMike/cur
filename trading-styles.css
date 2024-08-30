@@ -2,15 +2,15 @@
     max-width: 400px;
     margin: 100px auto 20px; /* Adjusted top margin to account for fixed header */
     padding: 20px;
-    background-color: var(--white);
+    background-color: var(--primary-color); /* Changed from var(--white) to var(--primary-color) */
     border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    box-shadow: 0 0 10px rgba(255,255,255,0.1); /* Adjusted shadow color for dark theme */
 }
 
 .token-input {
     display: flex;
     margin-bottom: 10px;
-    background-color: var(--background-color);
+    background-color: #2a2a2a; /* Slightly lighter than the primary color */
     border-radius: 8px;
     overflow: hidden;
 }
@@ -24,18 +24,20 @@
     font-size: 18px;
     border: none;
     background-color: transparent;
+    color: var(--text-color); /* Added to ensure text is visible */
 }
 
 /* Token selector */
 .token-selector {
     flex-shrink: 0;
     padding: 8px 12px;
-    background-color: var(--white);
+    background-color: var(--accent-color); /* Changed from var(--white) to var(--accent-color) */
     border: none;
     border-radius: 20px;
     cursor: pointer;
     margin: 4px;
     font-size: 14px;
+    color: var(--white); /* Added to ensure text is visible */
 }
 
 /* Remove the following styles as they're no longer needed */
@@ -51,7 +53,7 @@
 .swap-button {
     width: 100%;
     padding: 12px;
-    background-color: var(--primary-color);
+    background-color: var(--accent-color); /* Changed from var(--primary-color) to var(--accent-color) */
     color: var(--white);
     border: none;
     border-radius: 8px;
@@ -62,18 +64,18 @@
 }
 
 .swap-button:hover {
-    background-color: var(--accent-color);
+    background-color: var(--primary-color);
 }
 
 .swap-button:disabled {
-    background-color: var(--background-color);
-    color: var(--text-color);
+    background-color: #2a2a2a; /* Slightly lighter than the primary color */
+    color: #888; /* Grayed out text for disabled state */
     cursor: not-allowed;
 }
 
 /* Trade details */
 .trade-details {
-    background-color: var(--background-color);
+    background-color: #2a2a2a; /* Slightly lighter than the primary color */
     border-radius: 8px;
     padding: 12px;
     margin-top: 20px;
@@ -89,7 +91,7 @@
 .settings-panel {
     margin-top: 20px;
     padding: 12px;
-    background-color: var(--background-color);
+    background-color: #2a2a2a; /* Slightly lighter than the primary color */
     border-radius: 8px;
 }
 
@@ -106,6 +108,8 @@
     padding: 4px;
     border: 1px solid var(--text-color);
     border-radius: 4px;
+    background-color: var(--primary-color);
+    color: var(--text-color);
 }
 
 /* Toggle switch for settings */
@@ -129,7 +133,7 @@
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: #ccc;
+    background-color: #555; /* Darker background for the toggle */
     transition: .4s;
     border-radius: 34px;
 }
@@ -147,7 +151,7 @@
 }
 
 input:checked + .slider {
-    background-color: var(--primary-color);
+    background-color: var(--accent-color);
 }
 
 input:checked + .slider:before {
