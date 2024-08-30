@@ -1,13 +1,24 @@
+:root {
+  --primary-color: #0052cc; /* Deeper blue for primary */
+  --secondary-color: #6554c0; /* Purple for secondary */
+  --accent-color: #00b8d9; /* Bright blue for accents */
+  --background-color: #f4f5f7; /* Light grayish blue for background */
+  --text-color: #172b4d; /* Dark blue for text */
+  --white: #ffffff;
+  --black: #000000;
+  --star-color: #ffe066; /* Yellow for star accents */
+}
+
 body {
     font-family: 'Roboto', Arial, sans-serif;
     margin: 0;
     padding: 0;
     line-height: 1.6;
-    color: #333;
-    background-color: #f0f2f5;
+    color: var(--text-color);
+    background-color: var(--background-color);
 }
 header {
-    background-color: #ffffff;
+    background-color: var(--white);
     box-shadow: 0 2px 4px rgba(0,0,0,0.1);
     padding: 1rem;
     position: fixed;
@@ -23,9 +34,9 @@ nav {
     margin: 0 auto;
 }
 .logo {
-    font-size: 1.5rem;
     font-weight: bold;
-    color: #007bff;
+    font-size: 24px;
+    color: var(--primary-color);
 }
 nav ul {
     display: flex;
@@ -36,12 +47,12 @@ nav ul li {
 }
 nav a {
     text-decoration: none;
-    color: #333;
+    color: var(--secondary-color);
     font-weight: 500;
     transition: color 0.3s ease;
 }
 nav a:hover {
-    color: #007bff;
+    color: var(--primary-color);
 }
 main {
     max-width: 1200px;
@@ -58,8 +69,8 @@ section {
 #hero {
     text-align: center;
     padding: 6rem 0;
-    background-color: #007bff;
-    color: #ffffff;
+    background: linear-gradient(45deg, var(--primary-color), var(--accent-color));
+    color: var(--white);
 }
 h1 {
     font-size: 3rem;
@@ -70,8 +81,8 @@ h2 {
     margin-bottom: 1.5rem;
 }
 button {
-    background-color: #28a745;
-    color: white;
+    background-color: var(--accent-color);
+    color: var(--white);
     border: none;
     padding: 0.75rem 1.5rem;
     font-size: 1rem;
@@ -80,7 +91,7 @@ button {
     transition: background-color 0.3s ease;
 }
 button:hover {
-    background-color: #218838;
+    background-color: var(--primary-color);
 }
 #stats {
     display: flex;
