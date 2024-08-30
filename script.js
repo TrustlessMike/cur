@@ -28,4 +28,34 @@ document.addEventListener('DOMContentLoaded', function() {
             this.reset();
         });
     }
+
+    // Function to set a given theme/color-scheme
+    function setTheme(themeName) {
+        localStorage.setItem('theme', themeName);
+        document.documentElement.setAttribute('data-theme', themeName);
+    }
+
+    // Function to toggle between light and dark theme
+    function toggleTheme() {
+        if (localStorage.getItem('theme') === 'dark') {
+            setTheme('light');
+        } else {
+            setTheme('dark');
+        }
+    }
+
+    // Immediately invoked function to set the theme on initial load
+    (function () {
+        if (localStorage.getItem('theme') === 'dark') {
+            setTheme('dark');
+            document.getElementById('checkbox').checked = true;
+        } else {
+            setTheme('light');
+        }
+    })();
+
+    // Event listener for the theme toggle
+    document.getElementById('checkbox').addEventListener('change', function() {
+        toggleTheme();
+    });
 });
