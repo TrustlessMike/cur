@@ -1,0 +1,161 @@
+.trading-interface {
+    max-width: 400px;
+    margin: 100px auto 20px; /* Adjusted top margin to account for fixed header */
+    padding: 20px;
+    background-color: var(--white);
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.token-input {
+    display: flex;
+    margin-bottom: 10px;
+    background-color: var(--background-color);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+/* ... other trading-specific styles ... */
+
+/* Token amount input */
+.token-amount-input {
+    flex-grow: 1;
+    padding: 12px;
+    font-size: 18px;
+    border: none;
+    background-color: transparent;
+}
+
+/* Token selector button */
+.token-selector {
+    display: flex;
+    align-items: center;
+    padding: 8px 12px;
+    background-color: var(--white);
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    margin: 4px;
+}
+
+.token-selector img {
+    width: 24px;
+    height: 24px;
+    margin-right: 8px;
+}
+
+/* Swap button states */
+.swap-button {
+    width: 100%;
+    padding: 12px;
+    background-color: var(--primary-color);
+    color: var(--white);
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+.swap-button:hover {
+    background-color: var(--accent-color);
+}
+
+.swap-button:disabled {
+    background-color: var(--background-color);
+    color: var(--text-color);
+    cursor: not-allowed;
+}
+
+/* Trade details */
+.trade-details {
+    background-color: var(--background-color);
+    border-radius: 8px;
+    padding: 12px;
+    margin-top: 20px;
+}
+
+.trade-details p {
+    display: flex;
+    justify-content: space-between;
+    margin: 8px 0;
+}
+
+/* Settings panel */
+.settings-panel {
+    margin-top: 20px;
+    padding: 12px;
+    background-color: var(--background-color);
+    border-radius: 8px;
+}
+
+.settings-option {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 12px;
+}
+
+/* Slippage tolerance input */
+.slippage-input {
+    width: 60px;
+    padding: 4px;
+    border: 1px solid var(--text-color);
+    border-radius: 4px;
+}
+
+/* Toggle switch for settings */
+.toggle-switch {
+    position: relative;
+    display: inline-block;
+    width: 50px;
+    height: 24px;
+}
+
+.toggle-switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    transition: .4s;
+    border-radius: 34px;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 16px;
+    width: 16px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    transition: .4s;
+    border-radius: 50%;
+}
+
+input:checked + .slider {
+    background-color: var(--primary-color);
+}
+
+input:checked + .slider:before {
+    transform: translateX(26px);
+}
+
+/* Responsive design */
+@media (max-width: 600px) {
+    .trading-interface {
+        max-width: 100%;
+        margin: 80px 10px 10px;
+        padding: 15px;
+    }
+}
