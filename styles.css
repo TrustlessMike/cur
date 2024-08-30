@@ -4,8 +4,6 @@
   --text-color: #333333;
   --accent-color: #4a90e2;
   --background-color: #ffffff;
-  --inverse-text-color: #ffffff;
-  --inverse-background-color: #1a1a1a;
 }
 
 [data-theme="dark"] {
@@ -14,8 +12,6 @@
   --text-color: #ffffff;
   --accent-color: #4a90e2;
   --background-color: #1a1a1a;
-  --inverse-text-color: #333333;
-  --inverse-background-color: #ffffff;
 }
 
 body {
@@ -46,12 +42,12 @@ h1, h2, h3, h4, h5, h6 {
 
 button {
   background-color: var(--accent-color);
-  color: var(--inverse-text-color);
+  color: var(--primary-color);
 }
 
 button:hover {
-  background-color: var(--primary-color);
-  color: var(--text-color);
+  background-color: var(--text-color);
+  color: var(--primary-color);
 }
 
 #features li {
