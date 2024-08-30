@@ -24,7 +24,7 @@
     font-size: 18px;
     border: none;
     background-color: transparent;
-    color: var(--text-color); /* Added to ensure text is visible */
+    color: var(--text-color); /* Changed from var(--white) to var(--text-color) */
 }
 
 /* Token selector */
@@ -79,6 +79,7 @@
     border-radius: 8px;
     padding: 12px;
     margin-top: 20px;
+    color: var(--text-color); /* Add this line to ensure text is blue */
 }
 
 .trade-details p {
@@ -93,6 +94,7 @@
     padding: 12px;
     background-color: #2a2a2a; /* Slightly lighter than the primary color */
     border-radius: 8px;
+    color: var(--text-color); /* Add this line to ensure text is blue */
 }
 
 .settings-option {
@@ -186,5 +188,5 @@ input:checked + .slider:before {
 
 body {
     background-color: #1a1a1a; /* Dark background color, adjust as needed */
-    color: #ffffff; /* White text color */
+    color: var(--text-color);
 }
