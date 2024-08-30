@@ -9,13 +9,13 @@ function init() {
     // Create particles
     const geometry = new THREE.BufferGeometry();
     const vertices = [];
-    for (let i = 0; i < 20000; i++) {  // Increased from 10000 to 20000
+    for (let i = 0; i < 10000; i++) {
         vertices.push(THREE.MathUtils.randFloatSpread(2000)); // x
         vertices.push(THREE.MathUtils.randFloatSpread(2000)); // y
         vertices.push(THREE.MathUtils.randFloatSpread(2000)); // z
     }
     geometry.setAttribute('position', new THREE.Float32BufferAttribute(vertices, 3));
-    const material = new THREE.PointsMaterial({ color: 0x007bff, size: 1.5 });  // Decreased size from 3 to 1.5
+    const material = new THREE.PointsMaterial({ color: 0x888888, size: 3 });
     particles = new THREE.Points(geometry, material);
     scene.add(particles);
 
