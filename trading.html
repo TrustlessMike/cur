@@ -6,6 +6,7 @@
     <title>Polaris Trading</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="trading-styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
 </head>
 <body>
     <header>
@@ -27,18 +28,16 @@
             <h2>Swap</h2>
             <div class="token-input">
                 <input type="number" class="token-amount-input" placeholder="0">
-                <button class="token-selector">
-                    <img src="default-token.png" alt="Token">
-                    Select token
-                </button>
+                <select class="token-selector" id="from-token">
+                    <option value="">Select token</option>
+                </select>
             </div>
             <div class="swap-icon">↓</div>
             <div class="token-input">
                 <input type="number" class="token-amount-input" placeholder="0">
-                <button class="token-selector">
-                    <img src="default-token.png" alt="Token">
-                    Select token
-                </button>
+                <select class="token-selector" id="to-token">
+                    <option value="">Select token</option>
+                </select>
             </div>
             <button class="swap-button">Swap</button>
             <div class="trade-details">
@@ -67,5 +66,46 @@
     </footer>
 
     <script src="script.js"></script>
+    <script>
+        const tokens = [
+            { id: 'bitcoin', symbol: 'btc', name: 'Bitcoin' },
+            { id: 'ethereum', symbol: 'eth', name: 'Ethereum' },
+            { id: 'solana', symbol: 'sol', name: 'Solana' }
+        ];
+
+        function populateTokenSelectors() {
+            const selectors = document.querySelectorAll('.token-selector');
+            selectors.forEach(selector => {
+                tokens.forEach(token => {
+                    const option = document.createElement('option');
+                    option.value = token.id;
+                    option.textContent = `${token.name} (${token.symbol.toUpperCase()})`;
+                    selector.appendChild(option);
+                });
+            });
+        }
+
+        async function fetchTokenPrices() {
+            try {
+                const response = await axios.get('https://api.coingecko.com/api/v3/simple/price', {
+                    params: {
+                        ids: tokens.map(t => t.id).join(','),
+                        vs_currencies: 'usd'
+                    }
+                });
+                return response.data;
+            } catch (error) {
+                console.error('Error fetching token prices:', error);
+                return {};
+            }
+        }
+
+        document.addEventListener('DOMContentLoaded', async () => {
+            populateTokenSelectors();
+            const prices = await fetchTokenPrices();
+            console.log('Token prices:', prices);
+            // You can use the prices data to update the UI or perform calculations
+        });
+    </script>
 </body>
 </html>

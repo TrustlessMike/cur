@@ -93,49 +93,6 @@ button {
 button:hover {
     background-color: var(--primary-color);
 }
-#stats {
-    display: flex;
-    justify-content: space-around;
-    text-align: center;
-}
-.stat-item h2 {
-    font-size: 2.5rem;
-    margin-bottom: 0.5rem;
-    color: #007bff;
-}
-.market-filters {
-    margin-bottom: 1rem;
-}
-.filter-btn {
-    background-color: #f8f9fa;
-    color: #333;
-    border: 1px solid #ddd;
-    margin-right: 0.5rem;
-}
-.filter-btn.active {
-    background-color: #007bff;
-    color: #ffffff;
-    border-color: #007bff;
-}
-.market-table {
-    width: 100%;
-    border-collapse: collapse;
-}
-.market-table th, .market-table td {
-    padding: 1rem;
-    text-align: left;
-    border-bottom: 1px solid #ddd;
-}
-.market-table th {
-    background-color: #f8f9fa;
-    font-weight: bold;
-}
-.positive { color: #28a745; }
-.negative { color: #dc3545; }
-.trade-btn {
-    background-color: #007bff;
-    padding: 0.5rem 1rem;
-}
 #features ul {
     list-style-type: none;
     padding: 0;
@@ -181,75 +138,6 @@ footer nav a {
     margin: 0 1rem;
     color: #007bff;
 }
-.market-table td {
-    vertical-align: middle;
-}
-.coin-image {
-    width: 24px;
-    height: 24px;
-    margin-right: 10px;
-    vertical-align: middle;
-}
-
-/* CoinGecko API Data Styles */
-#top-assets {
-    margin-top: 2rem;
-}
-
-#top-assets h3 {
-    font-size: 1.5rem;
-    color: #007bff;
-    margin-bottom: 1rem;
-}
-
-.asset-list {
-    list-style-type: none;
-    padding: 0;
-}
-
-.asset-item {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 1rem;
-    border-bottom: 1px solid #ddd;
-}
-
-.asset-item:last-child {
-    border-bottom: none;
-}
-
-.asset-name {
-    display: flex;
-    align-items: center;
-}
-
-.asset-icon {
-    width: 24px;
-    height: 24px;
-    margin-right: 10px;
-}
-
-.asset-symbol {
-    font-weight: bold;
-    margin-right: 5px;
-}
-
-.asset-price {
-    font-weight: bold;
-}
-
-.asset-change {
-    font-weight: bold;
-}
-
-.asset-change.positive {
-    color: #28a745;
-}
-
-.asset-change.negative {
-    color: #dc3545;
-}
 
 #background-canvas {
     position: fixed;
@@ -272,5 +160,5 @@ footer nav a {
 .logo-text {
     font-size: 1.5rem;
     font-weight: bold;
-    color: #ffffff; /* Assuming your text is white */
+    color: var(--primary-color);
 }
