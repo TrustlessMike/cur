@@ -7,101 +7,30 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <canvas id="background-canvas"></canvas>
     <header>
         <nav>
-            <a href="index.html" class="logo-container">
-                <img src="polaris-logo-transparent.png" alt="Polaris Logo" class="logo-image">
-                <span class="logo-text">Polaris</span>
-            </a>
-            <button id="theme-toggle" aria-label="Toggle dark mode" title="Toggle dark mode">
-                <svg class="sun-and-moon" aria-hidden="true" width="24" height="24" viewBox="0 0 24 24">
-                    <mask class="moon" id="moon-mask">
-                        <rect x="0" y="0" width="100%" height="100%" fill="white" />
-                        <circle cx="24" cy="10" r="6" fill="black" />
-                    </mask>
-                    <circle class="sun" cx="12" cy="12" r="6" mask="url(#moon-mask)" fill="currentColor" />
-                    <g class="sun-beams" stroke="currentColor">
-                        <line x1="12" y1="1" x2="12" y2="3" />
-                        <line x1="12" y1="21" x2="12" y2="23" />
-                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64" />
-                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78" />
-                        <line x1="1" y1="12" x2="3" y2="12" />
-                        <line x1="21" y1="12" x2="23" y2="12" />
-                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36" />
-                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22" />
-                    </g>
-                </svg>
-            </button>
-            <div class="theme-switch-wrapper">
-                <label class="theme-switch" for="checkbox">
-                    <input type="checkbox" id="checkbox" />
-                    <div class="slider round"></div>
-                </label>
-                <em>Dark Mode</em>
-            </div>
+            <a href="#" class="logo">Polaris</a>
+            <button id="theme-toggle">Toggle Theme</button>
         </nav>
     </header>
     <main>
-        <section id="hero" class="polaris-hero">
+        <section id="hero">
             <h1>Enhance Your Digital Trading Experience</h1>
             <p>Secure, fast, and intuitive platform for digital asset trading.</p>
-            <a href="trading.html">
-                <button class="cta-button">Start Trading</button>
-            </a>
+            <a href="#" class="cta-button">Start Trading</a>
         </section>
         <section id="features">
             <h2>Features</h2>
             <ul>
-                <li>
-                    <h3>Advanced Trading Tools</h3>
-                    <p>Access professional-grade charts and analysis tools.</p>
-                </li>
-                <li>
-                    <h3>Secure Wallet</h3>
-                    <p>Store your assets safely with our state-of-the-art security measures.</p>
-                </li>
-                <li>
-                    <h3>24/7 Support</h3>
-                    <p>Our dedicated team is always ready to assist you.</p>
-                </li>
+                <li>Advanced Trading Tools</li>
+                <li>Secure Wallet</li>
+                <li>24/7 Support</li>
             </ul>
-        </section>
-        <section id="about">
-            <h2>About Polaris</h2>
-            <p>Polaris is a cutting-edge digital trading platform designed to provide traders with a secure, efficient, and user-friendly environment. Our mission is to democratize access to digital asset markets and empower traders of all levels.</p>
-        </section>
-        <section id="roadmap">
-            <h2>Roadmap</h2>
-            <ul>
-                <li>Q3 2023: Launch of margin trading</li>
-                <li>Q4 2023: Mobile app release</li>
-                <li>Q1 2024: Integration of DeFi protocols</li>
-            </ul>
-        </section>
-        <section id="team">
-            <h2>Our Team</h2>
-            <p>Our diverse team of experts in finance, technology, and blockchain is committed to delivering the best possible trading experience for our users.</p>
-        </section>
-        <section id="contact">
-            <h2>Contact Us</h2>
-            <form id="contact-form">
-                <input type="email" placeholder="Enter your email" required>
-                <textarea placeholder="Your message" required></textarea>
-                <button type="submit">Send Message</button>
-            </form>
         </section>
     </main>
-    <footer class="polaris-footer">
+    <footer>
         <p>&copy; 2023 Polaris. All rights reserved.</p>
-        <nav>
-            <a href="privacy-policy.html">Privacy Policy</a>
-            <a href="terms-of-service.html">Terms of Service</a>
-        </nav>
     </footer>
-
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
-    <script src="particles.js"></script>
     <script src="script.js"></script>
 </body>
 </html>

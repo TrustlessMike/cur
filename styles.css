@@ -4,111 +4,83 @@
   --text-color: #333333;
   --accent-color: #4a90e2;
   --background-color: #ffffff;
-  --inverse-text-color: #ffffff;
 }
 
 [data-theme="dark"] {
   --primary-color: #1a1a1a;
   --secondary-color: #2a2a2a;
   --text-color: #ffffff;
-  --accent-color: #4a90e2;
   --background-color: #1a1a1a;
-  --inverse-text-color: #333333;
 }
 
 body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
   color: var(--text-color);
   background-color: var(--background-color);
+  margin: 0;
+  padding: 0;
 }
 
 header {
   background-color: var(--primary-color);
+  padding: 1rem;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
   color: var(--text-color);
+  text-decoration: none;
 }
 
-nav a {
-  color: var(--text-color);
-}
-
-nav a:hover {
-  color: var(--accent-color);
-}
-
-section {
-  background-color: var(--secondary-color);
-}
-
-h1, h2, h3, h4, h5, h6 {
-  color: var(--text-color);
-}
-
-button {
+#theme-toggle {
   background-color: var(--accent-color);
-  color: var(--inverse-text-color);
+  color: var(--primary-color);
+  border: none;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
 }
 
-button:hover {
-  background-color: var(--text-color);
-  color: var(--inverse-text-color);
+main {
+  padding: 2rem;
+}
+
+#hero {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.cta-button {
+  display: inline-block;
+  background-color: var(--accent-color);
+  color: var(--primary-color);
+  padding: 0.5rem 1rem;
+  text-decoration: none;
+  border-radius: 4px;
+}
+
+#features ul {
+  list-style-type: none;
+  padding: 0;
 }
 
 #features li {
-  background-color: var(--secondary-color);
-  color: var(--text-color);
+  margin-bottom: 1rem;
 }
 
 footer {
   background-color: var(--primary-color);
   color: var(--text-color);
-}
-
-#theme-toggle {
-  color: var(--text-color);
-}
-
-#theme-toggle:hover {
-  color: var(--accent-color);
-}
-
-.sun-and-moon > :is(.moon, .sun) {
-  fill: var(--text-color);
-}
-
-.sun-and-moon > .sun-beams {
-  stroke: var(--text-color);
-}
-
-/* Add these new styles */
-input, textarea {
-  background-color: var(--background-color);
-  color: var(--text-color);
-  border: 1px solid var(--text-color);
-}
-
-.logo-text {
-  color: var(--text-color);
-}
-
-#hero {
-  background-color: var(--primary-color);
-  color: var(--text-color);
-}
-
-.cta-button {
-  background-color: var(--accent-color);
-  color: var(--inverse-text-color);
-}
-
-.cta-button:hover {
-  background-color: var(--text-color);
-  color: var(--inverse-text-color);
-}
-
-#background-canvas {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: -1;
+  text-align: center;
+  padding: 1rem;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
 }
