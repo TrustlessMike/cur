@@ -257,3 +257,19 @@ footer nav a {
     left: 0;
     z-index: -1;
 }
+
+.logo-container {
+    display: flex;
+    align-items: center;
+}
+
+.logo-image {
+    width: 30px; /* Adjust this value to resize the logo */
+    height: auto;
+    margin-right: 10px; /* Space between logo and text */
+}
+
+.logo-text {
+    font-size: 1.5rem; /* Adjust as needed */
+    font-weight: bold;
+}
