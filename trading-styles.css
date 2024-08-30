@@ -172,4 +172,15 @@ input:checked + .slider:before {
 .logo-container {
     display: flex;
     align-items: center;
+    text-decoration: none;
+    color: inherit;
+}
+
+.logo-container:hover {
+    opacity: 0.8; /* Subtle hover effect */
+}
+
+body {
+    background-color: #1a1a1a; /* Dark background color, adjust as needed */
+    color: #ffffff; /* White text color */
 }
