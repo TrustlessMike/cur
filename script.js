@@ -58,4 +58,7 @@ document.addEventListener('DOMContentLoaded', function() {
     document.getElementById('checkbox').addEventListener('change', function() {
         toggleTheme();
     });
+
+    // Event listener for the theme toggle button
+    document.getElementById('theme-toggle').addEventListener('click', toggleTheme);
 });

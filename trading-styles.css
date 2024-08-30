@@ -2,7 +2,7 @@
     max-width: 400px;
     margin: 100px auto 20px; /* Adjusted top margin to account for fixed header */
     padding: 20px;
-    background-color: var(--primary-color); /* Changed from var(--white) to var(--primary-color) */
+    background-color: var(--secondary-color); /* Updated to use secondary color */
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0,0,0,0.1);
     color: var(--text-color);
@@ -11,7 +11,7 @@
 .token-input {
     display: flex;
     margin-bottom: 10px;
-    background-color: var(--background-color); /* Light gray background */
+    background-color: var(--background-color); /* Updated to use background color */
     border-radius: 8px;
     overflow: hidden;
     color: var(--text-color);
@@ -26,20 +26,20 @@
     font-size: 18px;
     border: none;
     background-color: transparent;
-    color: var(--text-color); /* Changed from var(--white) to var(--text-color) */
+    color: var(--text-color); /* Updated to use text color */
 }
 
 /* Token selector */
 .token-selector {
     flex-shrink: 0;
     padding: 8px 12px;
-    background-color: var(--accent-color); /* Changed from var(--white) to var(--accent-color) */
+    background-color: var(--accent-color); /* Updated to use accent color */
     border: none;
     border-radius: 20px;
     cursor: pointer;
     margin: 4px;
     font-size: 14px;
-    color: var(--white); /* Added to ensure text is visible */
+    color: var(--inverse-text-color); /* Updated to use inverse text color */
 }
 
 /* Remove the following styles as they're no longer needed */
@@ -55,8 +55,8 @@
 .swap-button {
     width: 100%;
     padding: 12px;
-    background-color: var(--accent-color); /* Changed from var(--primary-color) to var(--accent-color) */
-    color: var(--white);
+    background-color: var(--accent-color); /* Updated to use accent color */
+    color: var(--inverse-text-color); /* Updated to use inverse text color */
     border: none;
     border-radius: 8px;
     cursor: pointer;
@@ -66,22 +66,24 @@
 }
 
 .swap-button:hover {
-    background-color: #3a80d2; /* Slightly darker accent color */
+    background-color: var(--primary-color); /* Updated to use primary color */
+    color: var(--text-color); /* Updated to use text color */
 }
 
 .swap-button:disabled {
-    background-color: #d1d1d1; /* Light gray for disabled state */
-    color: #888; /* Grayed out text for disabled state */
+    background-color: var(--secondary-color); /* Updated to use secondary color */
+    color: var(--text-color); /* Updated to use text color */
+    opacity: 0.5;
     cursor: not-allowed;
 }
 
 /* Trade details */
 .trade-details {
-    background-color: #f5f5f5; /* Light gray background */
+    background-color: var(--secondary-color); /* Updated to use secondary color */
     border-radius: 8px;
     padding: 12px;
     margin-top: 20px;
-    color: var(--text-color); /* Add this line to ensure text is blue */
+    color: var(--text-color); /* Updated to use text color */
 }
 
 .trade-details p {
@@ -94,9 +96,9 @@
 .settings-panel {
     margin-top: 20px;
     padding: 12px;
-    background-color: #f5f5f5; /* Light gray background */
+    background-color: var(--secondary-color); /* Updated to use secondary color */
     border-radius: 8px;
-    color: var(--text-color); /* Add this line to ensure text is blue */
+    color: var(--text-color); /* Updated to use text color */
 }
 
 .settings-option {
@@ -112,8 +114,8 @@
     padding: 4px;
     border: 1px solid var(--text-color);
     border-radius: 4px;
-    background-color: var(--white);
-    color: var(--text-color);
+    background-color: var(--background-color); /* Updated to use background color */
+    color: var(--text-color); /* Updated to use text color */
 }
 
 /* Toggle switch for settings */
@@ -137,7 +139,7 @@
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: #ccc;
+    background-color: var(--text-color); /* Updated to use text color */
     transition: .4s;
     border-radius: 34px;
 }
@@ -149,13 +151,13 @@
     width: 16px;
     left: 4px;
     bottom: 4px;
-    background-color: white;
+    background-color: var(--inverse-text-color); /* Updated to use inverse text color */
     transition: .4s;
     border-radius: 50%;
 }
 
 input:checked + .slider {
-    background-color: var(--accent-color);
+    background-color: var(--accent-color); /* Updated to use accent color */
 }
 
 input:checked + .slider:before {
