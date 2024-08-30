@@ -264,12 +264,13 @@ footer nav a {
 }
 
 .logo-image {
-    width: 30px; /* Adjust this value to resize the logo */
-    height: auto;
-    margin-right: 10px; /* Space between logo and text */
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;
 }
 
 .logo-text {
-    font-size: 1.5rem; /* Adjust as needed */
+    font-size: 1.5rem;
     font-weight: bold;
+    color: #ffffff; /* Assuming your text is white */
 }
