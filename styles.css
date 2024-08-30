@@ -13,19 +13,33 @@
   --background-color: #1a1a1a;
 }
 
-body {
-  font-family: 'Arial', sans-serif;
-  line-height: 1.6;
-  color: var(--text-color);
-  background-color: var(--background-color);
+body, html {
   margin: 0;
   padding: 0;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
+  height: 100%;
+  font-family: Arial, sans-serif;
+  overflow: hidden; /* Prevent scrolling */
+}
+
+.background {
+  position: fixed; /* Fixed position to stay in the background */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1; /* Behind other content */
+  overflow: hidden; /* Prevent overflow */
+}
+
+.content {
+  text-align: center; /* Center content */
+  color: #ffffff; /* White text */
+  position: relative; /* Position relative for z-index */
+  z-index: 1; /* Above the background */
 }
 
 header {
+  padding: 50px; /* Space around header */
   background-color: var(--primary-color);
   padding: 1rem;
   box-shadow: 0 2px 4px rgba(0,0,0,0.1);
@@ -72,13 +86,14 @@ main {
 
 .cta-button {
   display: inline-block;
-  background-color: var(--accent-color);
-  color: var(--primary-color);
-  padding: 0.75rem 1.5rem;
-  text-decoration: none;
-  border-radius: 4px;
+  background-color: #007bff; /* Button color */
+  color: white; /* Button text color */
+  padding: 10px 20px; /* Button padding */
+  border: none; /* No border */
+  border-radius: 5px; /* Rounded corners */
   font-weight: bold;
   transition: background-color 0.3s ease;
+  cursor: pointer; /* Pointer cursor on hover */
 }
 
 .cta-button:hover {
@@ -111,7 +126,23 @@ main {
   box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
 
+.features {
+  display: flex; /* Flexbox layout */
+  justify-content: space-around; /* Space items evenly */
+  padding: 20px; /* Space around features section */
+}
+
+.feature-item {
+  background-color: rgba(30, 30, 30, 0.8); /* Semi-transparent background */
+  padding: 20px; /* Space inside feature item */
+  border-radius: 5px; /* Rounded corners */
+  width: 30%; /* Width of feature items */
+  text-align: center; /* Center text */
+}
+
 footer {
+  text-align: center; /* Center footer text */
+  padding: 20px; /* Space around footer */
   background-color: var(--primary-color);
   color: var(--text-color);
   text-align: center;
@@ -127,4 +158,21 @@ footer {
     width: 100%;
     height: 100%;
     z-index: -1;
+}
+
+.star {
+    position: absolute;
+    top: -10px; /* Start above the viewport */
+    width: 5px; /* Star size */
+    height: 5px; /* Star size */
+    background-color: white; /* Star color */
+    border-radius: 50%; /* Make it round */
+    animation: fall linear forwards; /* Animation */
+}
+
+@keyframes fall {
+    to {
+        transform: translateY(100vh); /* Fall to the bottom of the viewport */
+        opacity: 0; /* Fade out */
+    }
 }

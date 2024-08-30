@@ -3,47 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Polaris</title>
     <link rel="stylesheet" href="styles.css">
-    <style>
-        #background-canvas {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            z-index: -1;
-        }
-    </style>
+    <title>Your Project</title>
 </head>
 <body>
-    <canvas id="background-canvas"></canvas>
-    <header>
-        <nav>
-            <a href="#" class="logo">Polaris</a>
-            <button id="theme-toggle">Toggle Theme</button>
-        </nav>
-    </header>
-    <main>
-        <section id="hero">
-            <h1>Enhance Your Digital Trading Experience</h1>
-            <p>Secure, fast, and intuitive platform for digital asset trading.</p>
-            <a href="#" class="cta-button">Start Trading</a>
-        </section>
-        <section id="features">
+    <div class="background"></div>
+    <div class="content">
+        <header>
+            <h1>Welcome to Your Project</h1>
+            <button class="cta-button">Get Started</button>
+        </header>
+        <section class="features">
             <h2>Features</h2>
-            <ul>
-                <li>Advanced Trading Tools</li>
-                <li>Secure Wallet</li>
-                <li>24/7 Support</li>
-            </ul>
+            <div class="feature-item">Feature 1</div>
+            <div class="feature-item">Feature 2</div>
+            <div class="feature-item">Feature 3</div>
         </section>
-    </main>
+    </div>
     <footer>
-        <p>&copy; 2023 Polaris. All rights reserved.</p>
+        <p>&copy; 2024 Your Project. All Rights Reserved.</p>
     </footer>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
-    <script src="particles.js"></script>
     <script src="script.js"></script>
 </body>
 </html>

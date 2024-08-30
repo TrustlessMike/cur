@@ -21,3 +21,21 @@ document.addEventListener('DOMContentLoaded', (event) => {
         setTheme(savedTheme);
     }
 });
+
+const background = document.querySelector('.background');
+
+function createStar() {
+    const star = document.createElement('div');
+    star.className = 'star';
+    star.style.left = Math.random() * 100 + 'vw'; // Random horizontal position
+    star.style.animationDuration = Math.random() * 2 + 3 + 's'; // Random fall duration
+    background.appendChild(star);
+
+    // Remove the star after the animation ends
+    star.addEventListener('animationend', () => {
+        star.remove();
+    });
+}
+
+// Create stars at intervals
+setInterval(createStar, 300); // Adjust the interval for more or fewer stars
