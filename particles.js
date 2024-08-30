@@ -9,7 +9,7 @@ function init() {
     // Create particles
     const geometry = new THREE.BufferGeometry();
     const vertices = [];
-    for (let i = 0; i < 10000; i++) {
+    for (let i = 0; i < 5000; i++) {
         vertices.push(THREE.MathUtils.randFloatSpread(2000)); // x
         vertices.push(THREE.MathUtils.randFloatSpread(2000)); // y
         vertices.push(THREE.MathUtils.randFloatSpread(2000)); // z
