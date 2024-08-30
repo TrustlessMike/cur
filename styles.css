@@ -1,7 +1,7 @@
 :root {
-  --primary-color: #0052cc; /* Deeper blue for primary */
-  --secondary-color: #6554c0; /* Purple for secondary */
-  --accent-color: #00b8d9; /* Bright blue for accents */
+  --primary-color: #1a1a1a; /* Dark background color */
+  --secondary-color: #ffffff; /* White text color */
+  --accent-color: #4a90e2; /* A blue accent color, adjust as needed */
   --background-color: #f4f5f7; /* Light grayish blue for background */
   --text-color: #172b4d; /* Dark blue for text */
   --white: #ffffff;
@@ -152,8 +152,8 @@ footer nav a {
 }
 
 .logo-image {
-    width: 30px;
-    height: 30px;
+    width: 50px; /* Adjust this value as needed */
+    height: auto;
     margin-right: 10px;
 }
 
