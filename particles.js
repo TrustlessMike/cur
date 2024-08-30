@@ -1,6 +1,15 @@
 let scene, camera, renderer, particles;
 
 function init() {
+    console.log("Initializing particle system...");
+    if (!THREE) {
+        console.error("THREE is not defined. Make sure Three.js is loaded.");
+        return;
+    }
+    if (!document.getElementById('background-canvas')) {
+        console.error("Canvas element 'background-canvas' not found.");
+        return;
+    }
     scene = new THREE.Scene();
     camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 2000);
     renderer = new THREE.WebGLRenderer({ canvas: document.getElementById('background-canvas'), alpha: true, antialias: true });
